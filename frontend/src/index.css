@@ -1,0 +1,30 @@
+:root {
+  /* Brand */
+  --primary: #f59e0b;
+  --primary-hover: #d97706;
+  --primary-light: #fcd34d;
+
+  /* Background */
+  --background: #fff8e7;
+  --surface: #ffffff;
+
+  /* Text */
+  --text: #1f2937;
+  --text-secondary: #6b7280;
+
+  /* Borders */
+  --border: #e5e7eb;
+
+  /* Note colors */
+  --note-yellow: #fef3c7;
+  --note-pink: #fce7f3;
+  --note-blue: #dbeafe;
+  --note-green: #dcfce7;
+  --note-purple: #ede9fe;
+  --note-orange: #ffedd5;
+
+  /* States */
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #f59e0b;
+}
