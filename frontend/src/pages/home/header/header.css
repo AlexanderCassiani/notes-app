@@ -1,0 +1,43 @@
+header {
+  position: fixed;
+  top: 0;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--border);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h2 {
+  font-weight: bold;
+  font-size: 32px;
+  margin: 0;
+}
+
+.btn-login-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-signup {
+  background-color: var(--primary);
+  font-weight: 600;
+  transition: background-color 0.3 ease;
+}
+
+.btn-signup:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-login {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  transition: background-color 0.3 ease;
+}
+
+.btn-login:hover {
+  background-color: var(--primary-light);
+}
