@@ -1,11 +1,11 @@
 :root {
   /* Brand */
-  --primary: #f59e0b;
-  --primary-hover: #d97706;
+  --primary: #f6a623;
+  --primary-hover: #da7b10;
   --primary-light: #fcd34d;
 
   /* Background */
-  --background: #fff8e7;
+  --background: #fffff3;
   --surface: #ffffff;
 
   /* Text */
