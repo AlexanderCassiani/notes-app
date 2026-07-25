@@ -7,6 +7,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 243, 0.89);
 }
 
 .logo h2 {
