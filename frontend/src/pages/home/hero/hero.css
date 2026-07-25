@@ -1,0 +1,88 @@
+.hero {
+  padding: 188px 35px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 15px;
+}
+
+.hero-left h1 {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 45px;
+}
+
+.hero-left h1 strong {
+  font-size: 40px;
+}
+
+.hero-left p {
+  margin: 21px 0 28px 0;
+  max-width: 380px;
+  line-height: 1.6;
+  color: #3c3c3f;
+  font-size: 18px;
+}
+
+.btn-login-hero {
+  padding: 10px 12px;
+  margin-right: 5px;
+  border: 0;
+  background-color: var(--primary);
+  font-weight: 600;
+}
+
+.btn-login-hero:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-underline {
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.hero-right {
+  position: relative;
+}
+
+.note-card-1 span {
+  background-color: var(--note-blue);
+}
+
+.note-card-2 span {
+  background-color: var(--note-yellow);
+}
+
+.note-card-3 span {
+  background-color: var(--note-orange);
+}
+
+.note-card-1 {
+  left: 30px;
+  top: 2px;
+  transform: rotate(-8deg);
+  z-index: 3;
+}
+
+.note-card-2 {
+  left: 210px;
+  top: 90px;
+  transform: rotate(2deg);
+  z-index: 2;
+}
+
+.note-card-3 {
+  left: 50px;
+  top: 200px;
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+
+@media (max-width: 890px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

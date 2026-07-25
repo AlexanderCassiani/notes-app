@@ -1,0 +1,22 @@
+.note-card-container {
+  max-width: 220px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 12px 8px;
+  border-radius: 8px;
+  position: absolute;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.note-card-category {
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.note-card-text {
+  font-size: 16px;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
