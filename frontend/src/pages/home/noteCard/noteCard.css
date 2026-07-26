@@ -1,6 +1,6 @@
 .note-card-container {
   max-width: 220px;
-  background-color: var(--surface);
+  background-color: var(--background);
   border: 1px solid var(--border);
   padding: 12px 8px;
   border-radius: 8px;
