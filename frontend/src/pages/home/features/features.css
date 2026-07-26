@@ -1,0 +1,16 @@
+.feature-container {
+  border: 1px solid #d8d2c2;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.feature-container h2 {
+  margin: 0;
+  color: #27272b;
+}
+
+.feature-container p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #58585a;
+}
