@@ -1,5 +1,5 @@
 .hero {
-  padding: 188px 35px;
+  padding: 188px 35px 100px 35px;
   margin: 0 auto;
   width: 100%;
   max-width: 1080px;
@@ -26,6 +26,10 @@
   font-size: 18px;
 }
 
+.hero-left button {
+  margin-bottom: 38px;
+}
+
 .btn-login-hero {
   padding: 10px 12px;
   margin-right: 5px;
@@ -46,6 +50,7 @@
 
 .hero-right {
   position: relative;
+  height: 350px;
 }
 
 .note-card-1 span {
@@ -84,5 +89,16 @@
 @media (max-width: 890px) {
   .hero {
     grid-template-columns: 1fr;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-left h1 {
+    font-size: 34px;
+  }
+
+  .hero-left h1 strong {
+    font-size: 36px;
   }
 }

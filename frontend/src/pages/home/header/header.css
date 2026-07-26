@@ -2,14 +2,15 @@ header {
   position: fixed;
   top: 0;
   padding: 20px 22px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid #d8d2c2;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
   backdrop-filter: blur(6px);
-  background-color: rgba(255, 255, 243, 0.89);
+  background-color: rgba(239, 235, 225, 0.89);
+  flex-wrap: wrap;
 }
 
 .logo h2 {
@@ -23,6 +24,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .btn-signup {
@@ -43,4 +45,16 @@ header {
 
 .btn-login:hover {
   background-color: var(--primary-light);
+}
+
+@media (max-width: 600px) {
+  header button {
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo h2 {
+    font-size: 26px;
+  }
 }
