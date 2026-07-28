@@ -8,6 +8,12 @@
   width: 100%;
 }
 
+.feature-title {
+  text-align: center;
+  font-size: 32px;
+  margin: 0 0 28px 0;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

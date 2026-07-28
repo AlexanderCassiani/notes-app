@@ -10,6 +10,9 @@ const HomeLayout = () => {
       <main>
         <Hero />
         <section className="feature-section">
+          <h2 className="feature-title">
+            Pensado para cómo realmente trabajas
+          </h2>
           <div className="feature-grid">
             <Features
               title="Crea notas"
