@@ -44,7 +44,7 @@ export async function signup(req, res) {
 
     res.status(201).json({
       success: true,
-      message: "Nuevo usuario creado",
+      message: "Usuario registrado correctamente",
       newUser: {
         id: newUser.insertId,
         name,
