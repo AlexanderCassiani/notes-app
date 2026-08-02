@@ -1,0 +1,25 @@
+.signup-page {
+  position: relative;
+  background-color: var(--background);
+  padding: 20px 12px;
+  overflow: hidden;
+}
+
+.svg-left {
+  position: absolute;
+  left: -30px;
+  top: -25px;
+}
+
+.svg-right {
+  position: absolute;
+  right: -50px;
+  top: 120px;
+}
+
+@media (max-width: 1010px) {
+  .svg-left,
+  .svg-right {
+    display: none;
+  }
+}
