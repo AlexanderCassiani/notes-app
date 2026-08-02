@@ -28,9 +28,16 @@ header {
 }
 
 .btn-signup {
+  padding: 9px 12px;
+  font-size: 17px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
   background-color: var(--primary);
   font-weight: 600;
   transition: background-color 0.3 ease;
+  text-decoration: none;
 }
 
 .btn-signup:hover {
@@ -38,9 +45,15 @@ header {
 }
 
 .btn-login {
+  padding: 9px 12px;
+  font-size: 17px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
   background-color: transparent;
   border: 1px solid var(--primary);
   transition: background-color 0.3 ease;
+  text-decoration: none;
 }
 
 .btn-login:hover {

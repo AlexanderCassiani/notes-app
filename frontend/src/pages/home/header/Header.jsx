@@ -1,5 +1,5 @@
 import "./header.css";
-import Button from "../../../components/button/Button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -7,9 +7,14 @@ const Header = () => {
       <div className="logo">
         <h2>Notely</h2>
       </div>
+
       <div className="btn-login-options">
-        <Button text="Iniciar sesion" className="btn-login" />
-        <Button text="Crear cuenta" className="btn-signup" />
+        <Link to="/login" className="btn-login">
+          Iniciar sesión
+        </Link>
+        <Link to="/signup" className="btn-signup">
+          Registrarse
+        </Link>
       </div>
     </header>
   );
