@@ -18,3 +18,21 @@ export async function signup(name, email, password) {
     throw err;
   }
 }
+
+export async function login(email, password) {
+  try {
+    const response = await fetch(`${API}/users/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await response.json();
+
+    return data;
+  } catch (err) {
+    throw err;
+  }
+}
