@@ -1,6 +1,7 @@
 import validateUser from "./auth.validation.js";
 import { findByEmail, createUser } from "./auth.model.js";
 import bcrypt from "bcrypt";
+import generateToken from "./generateToken.js";
 
 export async function signup(req, res) {
   try {
@@ -16,7 +17,7 @@ export async function signup(req, res) {
     if (!validateUser(name, email, password)) {
       return res.status(400).json({
         success: false,
-        message: "Datos invalidos",
+        message: "Datos inválidos",
       });
     }
 
@@ -53,7 +54,65 @@ export async function signup(req, res) {
   } catch (err) {
     return res.status(500).json({
       success: false,
-      message: "Error al registrar el usuario. Intentelo mas tarde",
+      message: "Error al registrar el usuario. Inténtelo mas tarde",
+    });
+  }
+}
+
+export async function login(req, res) {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({
+      success: false,
+      message: "Todos los datos son requeridos",
+    });
+  }
+
+  let user;
+
+  try {
+    user = await findByEmail(email);
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: "Error al registrar el usuario",
+    });
+  }
+
+  if (!user) {
+    return res.status(401).json({
+      success: false,
+      message: "Credenciales incorrectas",
+    });
+  }
+
+  let coincide;
+
+  try {
+    coincide = await bcrypt.compare(password, user.password);
+  } catch (err) {
+    return res.status(401).json({
+      success: false,
+      message: "Credenciales incorrectas",
+    });
+  }
+
+  if (coincide) {
+    const token = generateToken(user.id, user.email);
+    res.json({
+      success: true,
+      message: "Usuario logueado exitosamente",
+      user: {
+        id: user.id_user,
+        name: user.name,
+        token,
+      },
+    });
+  } else {
+    return res.status(401).json({
+      success: false,
+      message: "Credenciales incorrectas",
     });
   }
 }
