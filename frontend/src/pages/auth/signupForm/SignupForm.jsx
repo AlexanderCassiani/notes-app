@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useSignup } from "../../../hooks/useSignup";
 import Loader from "../../../components/loader/Loader";
+import { Link } from "react-router-dom";
 
 const SignupForm = () => {
   const navigate = useNavigate();
@@ -23,10 +24,10 @@ const SignupForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="signup-form" onSubmit={handleSubmit}>
       <div>
         <h2>Registrarse</h2>
-        <p>Registrate para empezar a gestionar tus ideas</p>
+        <p>Regístrate para empezar a gestionar tus ideas</p>
         <Input
           type="text"
           placeholder="Nombre completo"
@@ -63,6 +64,13 @@ const SignupForm = () => {
           {result.message}
         </p>
       ) : null}
+
+      <p className="tiene-cuenta">
+        ¿Ya tienes cuenta una cuenta?{" "}
+        <Link to="/login" className="tiene-cuenta-link">
+          Inicia sesión
+        </Link>
+      </p>
 
       <button className="btn-to-home" onClick={() => navigate("/")}>
         <img src={toHome} alt="Regresar" />

@@ -1,4 +1,4 @@
-form {
+.signup-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@ form {
   text-align: center;
 }
 
-form div {
+.signup-form div {
   max-width: 450px;
   display: flex;
   justify-content: center;
@@ -17,12 +17,12 @@ form div {
   gap: 22px;
 }
 
-form div h2 {
+.signup-form div h2 {
   font-size: 36px;
   margin: 0;
 }
 
-form div p {
+.signup-form div p {
   color: var(--text-secondary);
   margin: 18px 0 20px 0;
 }
@@ -63,8 +63,20 @@ form div p {
   color: var(--error);
 }
 
+.tiene-cuenta {
+  margin: 36px 0;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.tiene-cuenta-link {
+  font-size: 15px;
+  color: var(--primary);
+  font-weight: 500;
+}
+
 .btn-to-home {
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
