@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import authRouter from "./feature/auth/auth.router.js";
-import connection from "./feature/config/db.js";
+import connection from "./config/db.js";
 
 const app = express();
 
