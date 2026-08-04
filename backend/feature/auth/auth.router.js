@@ -1,11 +1,12 @@
 import express from "express";
 
-import { signup, login } from "./auth.controller.js";
+import { signup, login, googleLogin } from "./auth.controller.js";
 import authLimit from "../../middleware/rateLimit.js";
 
 const authRouter = express.Router();
 
 authRouter.post("/users/signup", authLimit, signup);
 authRouter.post("/users/login", authLimit, login);
+authRouter.post("/users/google", authLimit, googleLogin);
 
 export default authRouter;
