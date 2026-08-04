@@ -13,3 +13,10 @@ export async function createUser(name, email, password) {
 
   return result;
 }
+
+export async function createUserGoogle(name, email) {
+  const query = "INSERT INTO users (name, email) VALUES (?,?)";
+  const [result] = await db.query(query, [name, email]);
+
+  return result;
+}
