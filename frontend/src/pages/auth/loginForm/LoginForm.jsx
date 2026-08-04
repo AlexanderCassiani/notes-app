@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import useLogin from "../../../hooks/useLogin";
 import { useState } from "react";
 import Loader from "../../../components/loader/Loader";
+import { GoogleLogin } from "@react-oauth/google";
+import { googleLogin } from "../services/authService";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -21,6 +23,16 @@ const LoginForm = () => {
     await logIn(email, password);
 
     console.log(data);
+  };
+
+  const handleSuccess = async (response) => {
+    const res = await googleLogin(response.credential);
+
+    console.log(res);
+  };
+
+  const handleError = (error) => {
+    console.error("Error al loguearse con google: ", error);
   };
 
   return (
@@ -49,11 +61,7 @@ const LoginForm = () => {
           onClick={handleSubmit}
         />
 
-        {data ? (
-          <p className={`result ${data.success ? "success" : "error"}`}>
-            {data.message}
-          </p>
-        ) : null}
+        <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
 
         <p className="no-tiene-cuenta">
           ¿No tienes cuenta?{" "}
