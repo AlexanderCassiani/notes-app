@@ -36,3 +36,22 @@ export async function login(email, password) {
     throw err;
   }
 }
+
+export async function googleLogin(credential) {
+  try {
+    const response = await fetch(`${API}/users/google`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ credential }),
+    });
+
+    const data = await response.json();
+
+    return data;
+  } catch (err) {
+    console.error("Ha ocurrido un error al iniciar sesión con google: ", err);
+    throw err;
+  }
+}
