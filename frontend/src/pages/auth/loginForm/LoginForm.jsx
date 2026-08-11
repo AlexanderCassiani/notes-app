@@ -20,15 +20,17 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await logIn(email, password);
 
-    console.log(data);
+    const response = await logIn(email, password);
+
+    if (response?.success === false) return;
+
+    navigate("/notes");
   };
 
   const handleSuccess = async (response) => {
     const res = await googleLogin(response.credential);
-
-    console.log(res);
+    navigate("/notes");
   };
 
   const handleError = (error) => {
@@ -60,6 +62,12 @@ const LoginForm = () => {
           text={loading ? <Loader /> : "Iniciar sesión"}
           onClick={handleSubmit}
         />
+
+        {data ? (
+          <p className={`result ${data.success ? "success" : "error"}`}>
+            {data.message}
+          </p>
+        ) : null}
 
         <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
 
