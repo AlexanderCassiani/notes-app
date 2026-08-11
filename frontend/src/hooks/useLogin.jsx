@@ -10,12 +10,14 @@ const useLogin = () => {
       setLoading(true);
       const response = await login(email, password);
       setData(response);
+      return response;
     } catch (err) {
-      setData({
+      const errorData = {
         success: false,
         message: err.message,
-      });
-      console.error("Ha ocurrido un error al iniciar sesión: ", err.message);
+      };
+      setData(errorData);
+      return errorData;
     } finally {
       setLoading(false);
     }
