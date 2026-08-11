@@ -62,3 +62,16 @@
   color: var(--primary);
   font-weight: 500;
 }
+
+.result {
+  margin: 10px 0 !important;
+  font-size: 20px !important;
+}
+
+.success {
+  color: var(--success) !important;
+}
+
+.error {
+  color: var(--error) !important;
+}
