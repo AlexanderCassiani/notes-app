@@ -8,6 +8,9 @@
   --background: #fffff3;
   --surface: #ffffff;
 
+  --sidebar-hover: #fff1d6;
+  --sidebar-active: #f6a623;
+
   /* Text */
   --text: #181e27;
   --text-secondary: #6b7280;
