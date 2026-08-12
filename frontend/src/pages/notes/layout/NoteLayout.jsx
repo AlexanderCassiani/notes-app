@@ -1,7 +1,12 @@
+import "./notelayout.css";
+import SideBar from "../sidebar/SideBar";
+import Main from "../main/Main";
+
 const NoteLayout = () => {
   return (
-    <div>
-      <h1>Notely</h1>
+    <div className="notes-container">
+      <SideBar />
+      <Main />
     </div>
   );
 };
